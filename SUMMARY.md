@@ -37,5 +37,8 @@
 * [Design Document](design-doc/lynx-native-design.md)
   * [JS引擎扩展基础](design-doc/js-binding/js-binding-part1.md)
   * [JS引擎扩展进阶](design-doc/js-binding/js-binding-part2.md)
+  * [Java拓展JS](design-doc/js-binding/method_export.md)
+  * [Java层拓展实现分析](design-doc/js-binding/js_export_implement.md)
+  * [交互动画](design-doc/animate/coordinator_animation.md)
   * [JNI](design-doc/jni.md)
 * [相关工程配置](design-doc/project.md)
