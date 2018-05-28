@@ -1,0 +1,894 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JS引擎扩展进阶 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="method_export.html" />
+    
+    
+    <link rel="prev" href="js-binding-part1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../how-to-build.html">
+            
+                <a href="../../how-to-build.html">
+            
+                    
+                    How to Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get-start.html">
+            
+                <a href="../../get-start.html">
+            
+                    
+                    Get Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../roadmap.html">
+            
+                <a href="../../roadmap.html">
+            
+                    
+                    Road Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../css.html">
+            
+                <a href="../../css.html">
+            
+                    
+                    CSS支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../method_export.html">
+            
+                <a href="../../method_export.html">
+            
+                    
+                    拓展方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../apis/global-apis.html">
+            
+                <a href="../../apis/global-apis.html">
+            
+                    
+                    全局API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../apis/window.html">
+            
+                <a href="../../apis/window.html">
+            
+                    
+                    Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../apis/navigator.html">
+            
+                <a href="../../apis/navigator.html">
+            
+                    
+                    Navigator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../apis/screen.html">
+            
+                <a href="../../apis/screen.html">
+            
+                    
+                    Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../apis/loader.html">
+            
+                <a href="../../apis/loader.html">
+            
+                    
+                    Loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../apis/document.html">
+            
+                <a href="../../apis/document.html">
+            
+                    
+                    Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../apis/element.html">
+            
+                <a href="../../apis/element.html">
+            
+                    
+                    Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../apis/extened-apis.html">
+            
+                <a href="../../apis/extened-apis.html">
+            
+                    
+                    拓展API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../apis/pagenavigator.html">
+            
+                <a href="../../apis/pagenavigator.html">
+            
+                    
+                    Page Navigator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    动画
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../animation/animation.html">
+            
+                <a href="../../animation/animation.html">
+            
+                    
+                    普通动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../animation/interactive-animation.html">
+            
+                <a href="../../animation/interactive-animation.html">
+            
+                    
+                    交互动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../lepus.html">
+            
+                <a href="../lepus.html">
+            
+                    
+                    Lepus引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../components/component.html">
+            
+                <a href="../../components/component.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../components/body.html">
+            
+                <a href="../../components/body.html">
+            
+                    
+                    Body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../components/button.html">
+            
+                <a href="../../components/button.html">
+            
+                    
+                    Button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../components/cell.html">
+            
+                <a href="../../components/cell.html">
+            
+                    
+                    Cell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../components/checkbox.html">
+            
+                <a href="../../components/checkbox.html">
+            
+                    
+                    Checkbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../components/image.html">
+            
+                <a href="../../components/image.html">
+            
+                    
+                    Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../components/input.html">
+            
+                <a href="../../components/input.html">
+            
+                    
+                    Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../components/label.html">
+            
+                <a href="../../components/label.html">
+            
+                    
+                    Label
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../components/radio.html">
+            
+                <a href="../../components/radio.html">
+            
+                    
+                    Radio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../../components/scrollview.html">
+            
+                <a href="../../components/scrollview.html">
+            
+                    
+                    ScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../../components/slider.html">
+            
+                <a href="../../components/slider.html">
+            
+                    
+                    Slider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../../components/swiper.html">
+            
+                <a href="../../components/swiper.html">
+            
+                    
+                    Swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../../components/textarea.html">
+            
+                <a href="../../components/textarea.html">
+            
+                    
+                    Textarea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../../components/view.html">
+            
+                <a href="../../components/view.html">
+            
+                    
+                    View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../../components/viewstub.html">
+            
+                <a href="../../components/viewstub.html">
+            
+                    
+                    ViewStub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../lynx-native-design.html">
+            
+                <a href="../lynx-native-design.html">
+            
+                    
+                    Design Document
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="js-binding-part1.html">
+            
+                <a href="js-binding-part1.html">
+            
+                    
+                    JS引擎扩展基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.2" data-path="js-binding-part2.html">
+            
+                <a href="js-binding-part2.html">
+            
+                    
+                    JS引擎扩展进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="method_export.html">
+            
+                <a href="method_export.html">
+            
+                    
+                    Java拓展JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="js_export_implement.html">
+            
+                <a href="js_export_implement.html">
+            
+                    
+                    Java层拓展实现分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../animate/coordinator_animation.html">
+            
+                <a href="../animate/coordinator_animation.html">
+            
+                    
+                    交互动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../jni.html">
+            
+                <a href="../jni.html">
+            
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../project.html">
+            
+                <a href="../project.html">
+            
+                    
+                    相关工程配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JS引擎扩展进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="js-binding-&#x6280;&#x672F;">JS Binding &#x6280;&#x672F;</h3>
+<p><a href="https://github.com/hxxft/lynx-native/" target="_blank">Lynx&#xFF08;&#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x6846;&#x67B6;&#xFF09;</a> &#x7684; JS Binding &#x6280;&#x672F;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x76EE;&#x7684;&#x662F;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7684;&#x4E0E; JS &#x5F15;&#x64CE;&#x89E3;&#x8026;&#x7684;&#x901A;&#x4FE1;&#x6865;&#x6881;&#xFF0C;&#x540C;&#x65F6;&#x5177;&#x5907; JS &#x5F15;&#x64CE;&#x5207;&#x6362;&#x7684;&#x80FD;&#x529B;&#x3002;&#x8BE5;&#x6280;&#x672F;&#x7ECF;&#x5386;&#x4E86;&#x591A;&#x6B21;&#x8FED;&#x4EE3;&#xFF0C;&#x6700;&#x7EC8;&#x901A;&#x8FC7;&#x62BD;&#x8C61;&#x7684;&#x5F15;&#x64CE;&#x63A5;&#x53E3;&#x5C42;&#x8BBE;&#x8BA1;&#xFF0C;&#x5728;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x505A;&#x5230;&#x5BF9;&#x4E8E; JS &#x5F15;&#x64CE;&#x7684;&#x89E3;&#x8026;&#x3002;&#x76EE;&#x524D; Lynx &#x5728; Android &#x7AEF;&#x652F;&#x6301; V8 &#x548C; JSC &#x5F15;&#x64CE;&#x7684;&#x5207;&#x6362;&#x3002;</p>
+<h4 id="&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;">&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;</h4>
+<p>Lynx &#x662F;&#x4E00;&#x4E2A; JS &#x9A71;&#x52A8;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x6846;&#x67B6;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86; JS &#x8C03;&#x7528; Android &#x548C; iOS &#x7B49;&#x5E73;&#x53F0;&#x5C42;&#x7684;&#x6E32;&#x67D3;&#x80FD;&#x529B;&#xFF0C;&#x540C;&#x65F6;&#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x8005;&#x62D3;&#x5C55;&#x5E73;&#x53F0;&#x80FD;&#x529B;&#xFF0C;&#x56E0;&#x6B64;&#x5728; Lynx &#x4E2D;&#x548C; JS &#x901A;&#x4FE1;&#x7684;&#x9664;&#x4E86;&#x6838;&#x5FC3; Runtime &#x5C42;&#xFF0C;&#x8FD8;&#x5305;&#x62EC;&#x4E86;&#x5904;&#x4E8E;&#x5E73;&#x53F0;&#x5C42;&#x7684; Module &#x548C; RenderObjectImpl&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x6846;&#x67B6;&#x4E2D;&#x5B58;&#x5728;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x7ED3;&#x5408;&#x4E0A;&#x8FF0; Lynx &#x6846;&#x67B6;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5728; JS Binding &#x8FED;&#x4EE3;&#x65F6;&#x9047;&#x5230;&#x7684;&#x4E3B;&#x8981;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<ol>
+<li>&#x4EE3;&#x7801;&#x89E3;&#x8026;&#xFF1A;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684; JS &#x5F15;&#x64CE;&#x7684;&#x521D;&#x59CB;&#x5316;&#x7B49;&#x6D41;&#x7A0B;&#x548C; Extension &#xFF08;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF09;&#x65B9;&#x5F0F;&#x7684;&#x7EDF;&#x4E00;</li>
+<li>C++ &#x5BF9;&#x8C61;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;</li>
+<li>&#x8DE8;&#x7EBF;&#x7A0B;&#x548C;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x53C2;&#x6570;&#x8F6C;&#x5316;</li>
+</ol>
+<h4 id="&#x8BBE;&#x8BA1;">&#x8BBE;&#x8BA1;</h4>
+<blockquote>
+<p>&#x6574;&#x4F53;&#x8BBE;&#x8BA1;&#x4EE3;&#x7801;&#x5728; <a href="https://github.com/hxxft/lynx-native/tree/master/Core/runtime" target="_blank">runtime &#x76EE;&#x5F55;</a>&#x3002;</p>
+</blockquote>
+<p>&#x5BF9;&#x4E8E;<strong>&#x8DE8;&#x7EBF;&#x7A0B;&#x548C;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x53C2;&#x6570;&#x8F6C;&#x5316;</strong>&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x53C2;&#x6570;&#x5728;&#x4E0A;&#x4E0B;&#x6E38;&#x7684;&#x8F6C;&#x5316;&#xFF08;JS &#x4E0E;&#x6838;&#x5FC3; C++ &#x5C42;&#x7684;&#x8F6C;&#x5316;&#xFF0C;&#x6838;&#x5FC3;&#x5C42;&#x4E0E;&#x5E73;&#x53F0;&#x5C42; Android &amp; iOS &#x7684;&#x8F6C;&#x5316;&#xFF09;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; LynxValue &#x4F5C;&#x4E3A;&#x901A;&#x7528;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x5236;&#x5B9A; LynxValue &#x7684;&#x8F6C;&#x5316;&#x89C4;&#x5219;&#xFF0C;&#x51CF;&#x5C11;&#x53C2;&#x6570;&#x5728;&#x8DE8;&#x5C42;&#x8C03;&#x7528;&#x65F6;&#x7E41;&#x7410;&#x7684;&#x8F6C;&#x5316;&#x6B65;&#x9AA4;&#x3002;&#x8F6C;&#x5316;&#x89C4;&#x5219;&#x73B0;&#x5728;&#x5305;&#x62EC; JSC &#x5230;&#x6838;&#x5FC3;&#x5C42;&#x7684; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/jsc/jsc_helper.h" target="_blank">JSCHelper</a>&#xFF0C;V8 &#x5230;&#x6838;&#x5FC3;&#x5C42;&#x7684; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/v8/v8_helper.h" target="_blank">V8Helper</a>&#xFF0C;&#x6838;&#x5FC3;&#x5C42;&#x5230; iOS &#x5C42;&#x7684; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/base/ios/oc_helper.h" target="_blank">OCHelper</a>&#xFF0C;&#x4EE5;&#x53CA;&#x6838;&#x5FC3;&#x5C42;&#x5230; Android &#x5C42;&#x7684; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/base/android/jni_helper.h" target="_blank">JNIHelper</a>&#x3002;&#x4E0B;&#x9762;&#x7684;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x51FA; LynxValue &#x6D41;&#x901A;&#x4E0E;&#x4E0D;&#x540C;&#x5C42;&#x6B21;&#x3002;</p>
+<p><img src="jsbinding1.png" width="450"></p>
+<p><strong>&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7ED3;&#x6784;</strong></p>
+<ul>
+<li>LynxValue &#x662F;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x89C4;&#x5219;&#x7684;&#x57FA;&#x7C7B;&#xFF0C;&#x5176;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x8054;&#x5408;&#x4F53;&#x5B9A;&#x4E49;&#x4E86;&#x652F;&#x6301;&#x8F6C;&#x5316;&#x7684;&#x53C2;&#x6570;&#x3002;&#x5305;&#x62EC;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6570;&#x7EC4;&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#xFF0C;LynxObject &#x548C; LynxFunction &#x7B49;&#x3002;&#x9664;&#x4E86; LynxFunxtion &#x548C; LynxObject&#xFF0C;&#x5176;&#x4F59;&#x53C2;&#x6570;&#x5747;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x548C; JS &#x901A;&#x4FE1;&#xFF0C;&#x4EC5;&#x7528;&#x4E8E;&#x53C2;&#x6570;&#x8F6C;&#x5316;&#xFF0C;&#x540C;&#x65F6;&#x652F;&#x6301;&#x8DE8;&#x7EBF;&#x7A0B;&#x8DE8;&#x5E73;&#x53F0;&#x4F20;&#x9012;&#x3002;</li>
+<li>LynxArray &#x6709;&#x5E8F;&#x7684;&#x6709;&#x9650;&#x4E2A;&#x7684; LynxValue &#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5BF9;&#x5E94; JS &#x7AEF;&#x548C;&#x5E73;&#x53F0;&#x5C42;&#x7684;&#x6570;&#x7EC4;&#x3002;</li>
+<li>LynxMap &#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A; key&#xFF0C;&#x5BF9;&#x5E94; JS &#x7AEF;&#x7684; Map &#x6216;&#x8005; Object &#x548C;&#x5E73;&#x53F0;&#x5C42;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x3002;</li>
+<li>LynxFunction &#x5B58;&#x50A8;&#x4E86; JS &#x7AEF;&#x7684; function&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x5408;&#x9002;&#x65F6;&#x673A;&#x56DE;&#x8C03; JS function&#x3002;</li>
+<li>LynxObject &#x901A;&#x4FE1;&#x57FA;&#x7C7B;&#xFF0C;&#x501F;&#x52A9; ClassTemplate &#x6784;&#x5EFA;&#x4E0E; JS &#x901A;&#x4FE1;&#x6865;&#x6881;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x8BF7;&#x770B;&#x540E;&#x7EED;&#x5206;&#x6790;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9; JS &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x95F4;&#x63A5;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982; ProtectJSObject &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F; JS &#x5BF9;&#x8C61;&#x8131;&#x79BB; GC&#x3002;</li>
+</ul>
+<p><strong>&#x5728; JS &#x5F15;&#x64CE;&#x4EE3;&#x7801;&#x89E3;&#x8026;&#x65B9;&#x9762;</strong>&#xFF0C;JSC &#x548C; V8 &#x5728; JS &#x539F;&#x578B;&#x548C; Extension &#x4E0A;&#x7684;&#x8BBE;&#x8BA1;&#x90FD;&#x662F;&#x76F8;&#x4F3C;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x5B9E;&#x73B0;&#x7684;&#x7EC6;&#x8282;&#x4E0A;&#x4E0D;&#x4E00;&#x81F4;&#x3002;&#x5982;&#x5728; JSC &#x4E2D;&#x5229;&#x7528; JSClassRef &#x63CF;&#x8FF0;&#x539F;&#x578B;&#x4E0A;&#x6240;&#x5177;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x6784;&#x9020;&#x539F;&#x578B;&#x94FE;&#xFF0C;&#x800C; V8 &#x4E2D;&#x5229;&#x7528; FunctionTemplate &#x548C; PrototypeTemplate &#x4EE3;&#x66FF;&#xFF1B;JSC &#x4E2D;&#x4F7F;&#x7528; JSObjectSetPrivate &#x63A5;&#x53E3;&#x4E3A; JS &#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A; C++ &#x5BF9;&#x8C61;&#xFF0C;&#x800C; V8 &#x5219;&#x5229;&#x7528; ObjectTemplate::SetInternalField &#x65B9;&#x6CD5;&#x4EE3;&#x66FF;&#x3002;&#x57FA;&#x4E8E;&#x4E0A;&#x8FF0;&#x7279;&#x70B9;&#xFF0C;Lynx &#x7684; JSBinding &#x62BD;&#x8C61;&#x4E86;&#x4E00;&#x5C42; JS &#x7684;&#x539F;&#x578B;&#x6784;&#x9020;&#x5668;&#x548C;&#x65B9;&#x6CD5;&#x94A9;&#x5B50;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;&#x4E0E; JS &#x7684;&#x901A;&#x4FE1;&#x529F;&#x80FD;&#x3002;</p>
+<p><img src="jsbinding2.png" width="450"></p>
+<p><a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/js/js_vm.h" target="_blank">JSVM</a> &#x662F;&#x4EE3;&#x8868; JS &#x8FD0;&#x884C;&#x7684;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x771F;&#x6B63;&#x7684;&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x4EA4;&#x7531;&#x5404;&#x81EA;&#x5F15;&#x64CE;&#x5B9E;&#x73B0;&#x3002;</p>
+<p><a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/js/js_context.h" target="_blank">JSContext</a> &#x4E3A; JS &#x5F15;&#x64CE;&#x7684;&#x63A7;&#x5236;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x540C;&#x65F6;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x7C7B;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5168;&#x5C40;&#x5BF9;&#x8C61; Global&#xFF0C;&#x5BF9;&#x4E8E;&#x771F;&#x6B63;&#x7684; V8 &#x548C; JSC &#x7684;&#x64CD;&#x4F5C;&#x7531;&#x5176;&#x5B9E;&#x73B0;&#x7C7B; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/v8/v8_context.h" target="_blank">V8Context</a> &#x548C; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/jsc/jsc_context.h" target="_blank">JSCContext</a> &#x51B3;&#x5B9A;&#x3002;&#x800C;&#x4E0E; JS &#x901A;&#x4FE1;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x5BF9;&#x5916;&#x63A5;&#x53E3; ClassTemplate &#x548C;&#x5185;&#x90E8;&#x63A5;&#x53E3; ObjectWrap&#x3002;</p>
+<p><a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/js/class_template.h" target="_blank">ClassTemplate</a> &#x7528;&#x4E8E;&#x6784;&#x9020; JS &#x539F;&#x578B;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x6A21;&#x677F;&#x53EF;&#x4EE5;&#x6CE8;&#x518C;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;&#x94A9;&#x5B50;&#x7B49;&#xFF08;Extension &#x529F;&#x80FD;&#x3002;&#x8BE5;&#x5BF9;&#x8C61;&#x6301;&#x6709;PrototypeBuilder&#xFF0C;PrototypeBuilder &#x7531;&#x5BF9;&#x5E94;&#x7684; JS &#x5F15;&#x64CE;&#x5B9E;&#x73B0;&#xFF0C;&#x7528;&#x4E8E;&#x6784;&#x5EFA; JSC &#x7684; JSClassRef &#x6216;&#x8005;&#x662F; V8 &#x7684; FunctionTemplate&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x539F;&#x578B;&#x521B;&#x5EFA; JS &#x5BF9;&#x8C61;&#x3002; ClassTemplate &#x63D0;&#x4F9B;&#x4E86;&#x5B8F;&#x5B9A;&#x4E49;&#x5E2E;&#x52A9;&#x5B9A;&#x4E49;&#x9ED8;&#x8BA4; ClassTemplate &#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5B8F;&#x5B9A;&#x4E49;&#x7684;&#x610F;&#x4E49;&#x548C;&#x7528;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><code>DEFINE_CLASS_TEMPLATE_START</code> &#x9ED8;&#x8BA4; ClassTemplate &#x6784;&#x5EFA;&#x7684;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x7684;&#x5F00;&#x59CB;</li>
+<li><code>REGISTER_PARENT</code> &#x5B9A;&#x4E49; ClassTemplate &#x7684;&#x7236;&#x4EB2;&#xFF08;&#x539F;&#x578B;&#x94FE;&#xFF09;&#xFF0C;&#x5728; START &#x548C; END &#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x3002;</li>
+<li><code>EXPOSE_CONSTRUCTOR</code> &#x5728; JS &#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x66B4;&#x9732;&#x8BE5; ClassTemplate &#x4F5C;&#x4E3A;&#x6784;&#x9020;&#x5668;&#xFF0C;&#x5728; START &#x548C; END &#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x3002;</li>
+<li><code>REGISTER_METHOD_CALLBACK</code> &#x5411; ClassTemplate &#x4E2D;&#x6CE8;&#x518C;&#x51FD;&#x6570;&#x94A9;&#x5B50;&#xFF0C;&#x5728; START &#x548C; END &#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x3002;</li>
+<li><code>REGISTER_GET_CALLBACK</code> <code>REGISTER_SET_CALLBACK</code> &#x5411; ClassTemplate &#x4E2D;&#x6CE8;&#x518C;&#x53D8;&#x91CF;&#x94A9;&#x5B50;&#xFF0C;&#x5728; START &#x548C; END &#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x3002;</li>
+<li><code>DEFINE_CLASS_TEMPLATE_END</code> &#x9ED8;&#x8BA4; ClassTemplate &#x6784;&#x5EFA;&#x7684;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x7684;&#x7ED3;&#x675F;&#x3002;</li>
+<li><code>DEFAULT_CLASS_TEMPLATE</code> &#x83B7;&#x53D6;&#x9ED8;&#x8BA4; ClassTemplate&#x3002;</li>
+</ul>
+<p><a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/js/defines.h" target="_blank">defines.h</a> &#x5934;&#x6587;&#x4EF6;&#x542B;&#x6709;&#x7528;&#x4E8E;&#x5B9A;&#x4E49; JS &#x5F15;&#x64CE;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x7684;&#x5B8F;&#x89C4;&#x5219;&#xFF0C;C++ &#x7C7B;&#x9700;&#x8981;&#x6839;&#x636E;&#x5B8F;&#x5B9A;&#x4E49;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x51FD;&#x6570;&#x6307;&#x6B63;&#x6CE8;&#x518C;&#x5230; ClassTemplate &#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x81EA;&#x8EAB;&#x9700;&#x8981;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#xFF08;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x4F1A;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#xFF09;&#x8FDB;&#x884C;&#x771F;&#x6B63;&#x5B9E;&#x73B0;&#xFF0C;&#x624D;&#x80FD;&#x5B8C;&#x6210;&#x539F;&#x578B;&#x7684;&#x6784;&#x5EFA;&#x3002;ClassTemplate.h &#x4E2D;&#x901A;&#x8FC7;&#x5B8F;&#x5B9A;&#x4E49;&#x63D0;&#x4F9B;&#x4E86;&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E; C++ &#x5BF9;&#x8C61;&#x9ED8;&#x8BA4;&#x7684; ClassTemplate &#x5BF9;&#x8C61;&#x3002;&#x7ED3;&#x5408;&#x4E24;&#x4E2A;&#x5B8F;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5FEB;&#x901F;&#x6784;&#x5EFA;&#x4E0E; JS &#x901A;&#x4FE1;&#x7684; C++ &#x7C7B;&#x3002;&#x4E0B;&#x9762;&#x662F; defines.h &#x4E2D;&#x5B8F;&#x5B9A;&#x4E49;&#x7684;&#x610F;&#x4E49;&#xFF1A;</p>
+<ul>
+<li><code>DEFINE_METHOD_CALLBACK</code> &#x7528;&#x4E8E;&#x5B9A;&#x4E49; JS &#x5F15;&#x64CE;&#x51FD;&#x6570;&#x94A9;&#x5B50;&#xFF0C;<code>DEFINE_GROUP_METHOD_CALLBACK</code> &#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5E26;&#x65B9;&#x6CD5;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x94A9;&#x5B50;&#xFF0C;<code>METHOD_CALLBACK</code> &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x94A9;&#x5B50;&#x540D;&#x79F0;</li>
+<li><code>DEFINE_SET_CALLBACK</code> <code>DEFINE_GET_CALLBACK</code> &#x7528;&#x4E8E;&#x5B9A;&#x4E49; JS &#x5F15;&#x64CE;&#x53D8;&#x91CF;&#x94A9;&#x5B50;&#xFF0C;<code>SET_CALLBACK</code> <code>GET_CALLBACK</code> &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x94A9;&#x5B50;&#x540D;&#x79F0;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x65B9;&#x6CD5;&#x94A9;&#x5B50;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>JS &#x53D8;&#x91CF;&#x7684; Get &#x94A9;&#x5B50;&#xFF1A;base::ScopedPtr\<lynxvalue> Function();</lynxvalue></p>
+<p>JS &#x53D8;&#x91CF;&#x7684; Set &#x94A9;&#x5B50;&#xFF1A; void Function(base::ScopedPtr\<jscore::lynxvalue>&amp; value);</jscore::lynxvalue></p>
+<p>JS &#x65B9;&#x6CD5;&#x94A9;&#x5B50;&#xFF1A;base::ScopedPtr\<lynxvalue> Function(base::ScopedPtr\<lynxarray>&amp; array);</lynxarray></lynxvalue></p>
+</blockquote>
+<p><a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/js/object_wrap.h" target="_blank">ObjectWrap</a> &#x7528;&#x4E8E;&#x5EFA;&#x7ACB; JS &#x5BF9;&#x8C61;&#x548C; C++ &#x5BF9;&#x8C61;&#xFF08;&#x8FD9;&#x91CC;&#x6307; LynxObject&#xFF09;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5373;&#x7528;&#x4E8E;<strong>&#x7BA1;&#x7406; C++ &#x5BF9;&#x8C61;&#x751F;&#x547D;&#x5468;&#x671F;</strong>&#xFF0C;C++ &#x5BF9;&#x8C61;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x662F;&#x8DDF;&#x968F; JS &#x5BF9;&#x8C61;&#xFF08;&#x5F53;&#x7136; JS &#x5BF9;&#x8C61;&#x53EA;&#x662F;&#x5BF9; C++ &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4E0A;&#x7684;&#x589E;&#x51CF;&#xFF0C;&#x786E;&#x4FDD; C++ &#x5BF9;&#x8C61;&#x5728;&#x88AB;&#x5176;&#x4ED6;&#x7C7B;&#x5F15;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x88AB;&#x5B89;&#x5168;&#x91CA;&#x653E;&#x6216;&#x4F7F;&#x7528;&#xFF09;&#x3002;JS&#x5BF9;&#x8C61;&#x548C;C++&#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x7684;&#x65F6;&#x673A;&#x5728; ClassTemplate &#x521B;&#x5EFA; JS &#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x673A;&#x7531; JS &#x8FD0;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x51B3;&#x5B9A;&#xFF08;&#x5728; defines.h &#x4E2D;&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x5904;&#x7406;&#xFF09;&#xFF0C;&#x65E0;&#x9700;&#x5F00;&#x53D1;&#x8005;&#x5173;&#x5FC3;&#x3002;</p>
+<p><strong>JS Binding &#x6574;&#x4F53;&#x8FD0;&#x884C;&#x56FE;&#x793A;</strong>&#xFF0C;&#x5728; Lynx &#x5F00;&#x53D1;&#x4E2D;&#xFF0C;JS &#x5F15;&#x64CE;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x6216;&#x8005;&#x53C2;&#x6570;&#x8F6C;&#x5316;&#x89C4;&#x5219;&#x5BF9;&#x5916;&#x65E0;&#x611F;&#x77E5;&#xFF0C;&#x5229;&#x7528; LynxObject &#x548C; LynxValue &#x5C31;&#x53EF;&#x4EE5;&#x4E0E; JS &#x901A;&#x4FE1;&#xFF0C;&#x5B8C;&#x6210; API &#x8C03;&#x7528;&#x5DE5;&#x4F5C;&#x3002;LynxValue &#x548C; JSValue &#x7684;&#x8F6C;&#x5316;&#x5747;&#x662F;&#x5728; JSObject &#x548C; LynxObject &#x76F8;&#x4E92;&#x8C03;&#x7528;&#x65F6;&#x8FDB;&#x884C;&#x3002;</p>
+<p><img src="jsbinding3.png" width="450"></p>
+<p><strong>&#x5B9E;&#x4F8B;</strong>&#xFF1A;&#x5B9A;&#x4E49;&#x4E0E; JS &#x5BF9;&#x8C61; console &#x5173;&#x8054;&#x7684; <a href="https://github.com/hxxft/lynx-native/blob/master/Core/runtime/console.cc" target="_blank">Console &#x7C7B;</a>&#xFF0C;&#x5B9E;&#x73B0; console.log &#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x4E3B;&#x8981;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;</p>
+<ol>
+<li>&#x7EE7;&#x627F; LynxObject &#xFF0C;&#x5B9A;&#x4E49;&#x88AB;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684; Log &#x7C7B;&#x65B9;&#x6CD5;</li>
+<li>&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x8FDB;&#x884C; Extension &#x7684; Log &#x51FD;&#x6570;&#x94A9;&#x5B50;</li>
+<li>&#x6839;&#x636E; ClassTemplate &#x63D0;&#x4F9B;&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#xFF0C;&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x9ED8;&#x8BA4;&#x7684; ClassTemplate&#xFF0C;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x7684; ClassTemplate&#x3002;</li>
+</ol>
+<pre><code class="lang-c++"><span class="hljs-keyword">namespace</span> jscore {
+    <span class="hljs-keyword">class</span> Console : <span class="hljs-keyword">public</span> LynxObject {
+    <span class="hljs-keyword">public</span>:
+        Console(JSContext* context);
+        <span class="hljs-keyword">virtual</span> ~Console();
+        <span class="hljs-comment">// &#x5B9A;&#x4E49; JS &#x5F15;&#x64CE;&#x51FD;&#x6570;&#x94A9;&#x5B50;&#x56DE;&#x8C03;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;</span>
+        base::ScopedPtr&lt;LynxValue&gt; Log(base::ScopedPtr&lt;LynxArray&gt;&amp; <span class="hljs-built_in">array</span>);
+    };
+}
+</code></pre>
+<pre><code class="lang-c++"><span class="hljs-keyword">namespace</span> jscore {
+
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FOR_EACH_METHOD_BINDING(V)    \
+        V(Console, Log)                   </span>
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x9700;&#x8981;&#x8FDB;&#x884C; Extension &#x7684;&#x51FD;&#x6570;&#x94A9;&#x5B50;</span>
+    FOR_EACH_METHOD_BINDING(DEFINE_METHOD_CALLBACK)
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x7684; ClassTemplate</span>
+    DEFINE_CLASS_TEMPLATE_START(Console)
+        FOR_EACH_METHOD_BINDING(REGISTER_METHOD_CALLBACK)
+    DEFINE_CLASS_TEMPLATE_END
+
+    <span class="hljs-comment">// &#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x7684; ClassTemplate</span>
+    Console::Console(JSContext* context) : LynxObject(context, DEFAULT_CLASS_TEMPLATE(context)) {
+    }
+
+    Console::~Console() {}
+
+    base::ScopedPtr&lt;LynxValue&gt; Console::Log(base::ScopedPtr&lt;LynxArray&gt;&amp; <span class="hljs-built_in">array</span>) {
+        <span class="hljs-comment">// Print log</span>
+        <span class="hljs-keyword">return</span> base::ScopedPtr&lt;LynxValue&gt;(<span class="hljs-literal">NULL</span>);
+    }
+
+}
+</code></pre>
+<h4 id="&#x4F18;&#x7F3A;&#x70B9;">&#x4F18;&#x7F3A;&#x70B9;</h4>
+<p>&#x4F18;&#x70B9;&#xFF1A;&#x9694;&#x79BB; JS &#x5F15;&#x64CE;&#x4EE3;&#x7801;&#xFF0C;&#x6613;&#x4E8E;&#x5207;&#x6362;&#xFF1B;&#x65E0;&#x989D;&#x5916;&#x6D88;&#x8017;&#x7684;&#x51FD;&#x6570;&#x94A9;&#x5B50;&#xFF08;&#x901A;&#x4FE1;&#xFF09;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4; RN &#x7684;&#x901A;&#x4FE1;&#x66F4;&#x5FEB;&#xFF1B;&#x5FEB;&#x901F;&#x4E0A;&#x624B;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E; Web IDL &#x6CA1;&#x6709;&#x5B66;&#x4E60;&#x6210;&#x672C;&#x3002;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5728;&#x901A;&#x4FE1;&#x7C7B;&#x4E2D;&#x624B;&#x52A8;&#x7F16;&#x5199;&#x4E00;&#x5B9A;&#x4EE3;&#x7801;&#xFF1B;&#x6682;&#x65F6;&#x53EA;&#x6EE1;&#x8DB3;&#x4E8E;&#x548C; JS &#x5F15;&#x64CE;&#x901A;&#x4FE1;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E; Web IDL &#x800C;&#x8A00;&#x529F;&#x80FD;&#x76F8;&#x5BF9;&#x7B80;&#x5355;&#xFF0C;&#x6682;&#x65F6;&#x65E0;&#x6D89;&#x53CA;&#x591A;&#x79CD;&#x5916;&#x90E8;&#x8BED;&#x8A00;&#x3002;</p>
+<h4 id="&#x5C1D;&#x8BD5;">&#x5C1D;&#x8BD5;</h4>
+<p>Git &#x62C9; <a href="https://github.com/hxxft/lynx-native" target="_blank">Lynx &#x5DE5;&#x7A0B;</a>&#x6E90;&#x7801;&#xFF0C;&#x6839;&#x636E; <a href="https://github.com/hxxft/lynx-native#how-to-build" target="_blank">How To Build</a> &#x8FD0;&#x884C; Android &#x5DE5;&#x7A0B;&#xFF0C;&#x5728; Android &#x5DE5;&#x7A0B;&#x6839;&#x76EE;&#x5F55;&#x7684; gradle.properties &#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E; <code>js_engine_type=v8/jsc</code> &#x8FDB;&#x884C; V8 &#x5F15;&#x64CE;&#x548C; JSC &#x5F15;&#x64CE;&#x7684;&#x5207;&#x6362;&#x3002;iOS &#x4EC5;&#x652F;&#x6301; JSC &#x5F15;&#x64CE;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="js-binding-part1.html" class="navigation navigation-prev " aria-label="Previous page: JS引擎扩展基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="method_export.html" class="navigation navigation-next " aria-label="Next page: Java拓展JS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JS引擎扩展进阶","level":"1.11.2","depth":2,"next":{"title":"Java拓展JS","level":"1.11.3","depth":2,"path":"design-doc/js-binding/method_export.md","ref":"design-doc/js-binding/method_export.md","articles":[]},"previous":{"title":"JS引擎扩展基础","level":"1.11.1","depth":2,"path":"design-doc/js-binding/js-binding-part1.md","ref":"design-doc/js-binding/js-binding-part1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-doc/js-binding/js-binding-part2.md","mtime":"2018-05-27T07:06:06.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T07:37:19.289Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
